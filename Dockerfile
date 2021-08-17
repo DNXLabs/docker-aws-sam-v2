@@ -51,7 +51,7 @@ RUN curl -sL https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/
     rm glibc-${GLIBC_VERSION}.apk && \
     rm glibc-bin-${GLIBC_VERSION}.apk && \
     rm -rf /var/cache/apk/* && \
-    pip3 install aws-sam-cli==$SAM_VERSION
+    pip3 install --no-cache-dir aws-sam-cli==$SAM_VERSION
 
 COPY --from=saw /bin/saw /bin/saw
 
